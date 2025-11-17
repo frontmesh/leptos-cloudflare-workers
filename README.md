@@ -2,6 +2,8 @@
 
 A full-stack web application built with [Leptos](https://leptos.dev/) and deployed on [Cloudflare Workers](https://workers.cloudflare.com/), showcasing server-side rendering (SSR) and client-side hydration capabilities.
 
+> **💡 Using This as a Template?** See [TEMPLATE.md](./TEMPLATE.md) for quick setup instructions and customization guide!
+
 ## Overview
 
 This project demonstrates a modern approach to building isomorphic web applications using Rust and Leptos, with seamless deployment to Cloudflare Workers. The application uses:
