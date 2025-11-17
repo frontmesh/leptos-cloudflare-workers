@@ -1,0 +1,9 @@
+name = "leptos-cloudflare-workers"
+main = "build/index.js"
+compatibility_date = "2025-10-27"
+
+[build]
+command = "cargo leptos build --release && cargo install -q worker-build && LEPTOS_OUTPUT_NAME=leptos-cloudflare-workers worker-build --release --features=ssr"
+
+[assets]
+directory = "target/site"
