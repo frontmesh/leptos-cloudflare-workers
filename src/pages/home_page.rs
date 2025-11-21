@@ -69,8 +69,8 @@ pub fn HomePage() -> impl IntoView {
                                 <div class="absolute w-32 h-32 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-full blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
                                 
                                 <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-24 h-24 border-2 border-blue-200 rounded-full animate-spin-slow"></div>
-                                    <div class="absolute w-16 h-16 border-2 border-cyan-200 rounded-full animate-spin-reverse"></div>
+                                    <div class="w-24 h-24 border-2 border-blue-200 rounded-full" style="animation: spin-slow 20s linear infinite;"></div>
+                                    <div class="absolute w-16 h-16 border-2 border-cyan-200 rounded-full" style="animation: spin-reverse 15s linear infinite;"></div>
                                     <div class="absolute w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full"></div>
                                 </div>
                             </div>
