@@ -10,8 +10,8 @@ pub fn HomePage() -> impl IntoView {
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between items-center h-16">
                         <div class="flex items-center">
-                            <div class="text-2xl font-bold text-blue-600">
-                                "LeptosIO"
+                            <div class="text-lg font-bold text-blue-600">
+                                "LeptosCloudflareWorkers"
                             </div>
                         </div>
                         <div class="hidden md:flex items-center space-x-8">
@@ -20,9 +20,6 @@ pub fn HomePage() -> impl IntoView {
                             </a>
                             <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 font-medium transition">
                                 "How It Works"
-                            </a>
-                            <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-medium transition">
-                                "Pricing"
                             </a>
                             <button class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
                                 "Get Started"
@@ -64,31 +61,19 @@ pub fn HomePage() -> impl IntoView {
                             </div>
                         </div>
 
-                        // Hero Image
-                        <div class="relative hidden lg:block">
-                            <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-cyan-600/10 rounded-3xl blur-3xl"></div>
-                            <div class="relative bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-12 border border-blue-200">
-                                <div class="space-y-6">
-                                    <div class="flex items-center space-x-4">
-                                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
-                                            <span class="text-white font-bold text-xl">"⚡"</span>
-                                        </div>
-                                        <div class="flex-1">
-                                            <div class="h-2 bg-gray-200 rounded w-24"></div>
-                                            <div class="h-2 bg-gray-100 rounded w-32 mt-2"></div>
-                                        </div>
-                                    </div>
-                                    <div class="space-y-3">
-                                        <div class="h-3 bg-gray-300 rounded w-full"></div>
-                                        <div class="h-3 bg-gray-200 rounded w-5/6"></div>
-                                        <div class="h-3 bg-gray-200 rounded w-4/5"></div>
-                                    </div>
-                                    <div class="pt-6 border-t border-gray-200">
-                                        <div class="flex space-x-3">
-                                            <div class="flex-1 h-10 bg-blue-100 rounded-lg"></div>
-                                            <div class="flex-1 h-10 bg-cyan-100 rounded-lg"></div>
-                                        </div>
-                                    </div>
+                        // Hero Animation
+                        <div class="relative hidden lg:block h-96">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                // Animated gradient orbs
+                                <div class="absolute w-32 h-32 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-3xl opacity-20 animate-blob"></div>
+                                <div class="absolute w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+                                <div class="absolute w-32 h-32 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-full blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+                                
+                                // Center circles
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="w-24 h-24 border-2 border-blue-200 rounded-full animate-spin-slow"></div>
+                                    <div class="absolute w-16 h-16 border-2 border-cyan-200 rounded-full animate-spin-reverse"></div>
+                                    <div class="absolute w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full"></div>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +109,7 @@ pub fn HomePage() -> impl IntoView {
 
                         // Feature 2
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all">
-                            <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"⚡"</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900 mb-4">
@@ -150,7 +135,7 @@ pub fn HomePage() -> impl IntoView {
 
                         // Feature 4
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all">
-                            <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"🔒"</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900 mb-4">
@@ -176,7 +161,7 @@ pub fn HomePage() -> impl IntoView {
 
                         // Feature 6
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all">
-                            <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-6">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"🚀"</span>
                             </div>
                             <h3 class="text-2xl font-bold text-gray-900 mb-4">
@@ -261,63 +246,18 @@ pub fn HomePage() -> impl IntoView {
                 </div>
             </div>
 
-            // Stats Section
-            <div class="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                        <div>
-                            <div class="text-5xl font-bold text-white mb-2">
-                                "<5ms"
-                            </div>
-                            <p class="text-blue-100 text-lg">
-                                "Average Response Time"
-                            </p>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-bold text-white mb-2">
-                                "300+"
-                            </div>
-                            <p class="text-blue-100 text-lg">
-                                "Global Edge Locations"
-                            </p>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-bold text-white mb-2">
-                                "0"
-                            </div>
-                            <p class="text-blue-100 text-lg">
-                                "Cold Starts"
-                            </p>
-                        </div>
-                        <div>
-                            <div class="text-5xl font-bold text-white mb-2">
-                                "∞"
-                            </div>
-                            <p class="text-blue-100 text-lg">
-                                "Scalability"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             // CTA Section
-            <div class="py-24 bg-white border-t border-gray-200">
+            <div class="py-24 bg-blue-600">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 class="text-5xl font-bold text-gray-900 mb-6">
+                    <h2 class="text-5xl font-bold text-white mb-6">
                         "Ready to Build?"
                     </h2>
-                    <p class="text-2xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                    <p class="text-2xl text-blue-100 mb-12 max-w-2xl mx-auto">
                         "Start building your next web application with Leptos and Cloudflare Workers today."
                     </p>
-                    <div class="flex flex-wrap justify-center gap-6">
-                        <button class="px-10 py-4 bg-blue-600 text-white font-bold text-lg rounded-xl hover:bg-blue-700 transition shadow-lg hover:shadow-xl hover:shadow-blue-600/30">
-                            "Get Started Free"
-                        </button>
-                        <button class="px-10 py-4 border-2 border-blue-600 text-blue-600 font-bold text-lg rounded-xl hover:bg-blue-50 transition">
-                            "Schedule Demo"
-                        </button>
-                    </div>
+                    <button class="px-10 py-4 bg-white text-blue-600 font-bold text-lg rounded-xl hover:bg-gray-50 transition shadow-lg hover:shadow-xl hover:shadow-white/30">
+                        "Get Started Free"
+                    </button>
                 </div>
             </div>
 
@@ -326,8 +266,8 @@ pub fn HomePage() -> impl IntoView {
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                         <div>
-                            <div class="text-2xl font-bold text-white mb-4">
-                                "LeptosIO"
+                            <div class="text-xl font-bold text-white mb-4">
+                                "LeptosCloudflareWorkers"
                             </div>
                             <p class="text-gray-400">
                                 "Full-stack web development in Rust."
@@ -341,11 +281,6 @@ pub fn HomePage() -> impl IntoView {
                                 <li>
                                     <a href="#" class="text-gray-400 hover:text-white transition">
                                         "Features"
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-gray-400 hover:text-white transition">
-                                        "Pricing"
                                     </a>
                                 </li>
                                 <li>
