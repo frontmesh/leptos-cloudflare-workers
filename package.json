@@ -12,7 +12,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:build": "postcss style/main.css -o style/main.css"
+    "css:build": "postcss style/main.css -o public/main.css"
   },
   "repository": {
     "type": "git",
