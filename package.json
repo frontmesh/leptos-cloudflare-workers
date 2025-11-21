@@ -1,0 +1,29 @@
+{
+  "name": "leptos-cloudflare-workers",
+  "version": "1.0.0",
+  "description": "A full-stack web application built with [Leptos](https://leptos.dev/) and deployed on [Cloudflare Workers](https://workers.cloudflare.com/), showcasing server-side rendering (SSR) and client-side hydration capabilities.",
+  "main": "index.js",
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
+    "lightningcss": "^1.30.2",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^4.1.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "postcss style/main.css -o public/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontmesh/leptos-cloudflare-workers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/frontmesh/leptos-cloudflare-workers/issues"
+  },
+  "homepage": "https://github.com/frontmesh/leptos-cloudflare-workers#readme"
+}

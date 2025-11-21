@@ -6,6 +6,7 @@ use crate::app::*;
 
 pub mod app;
 pub mod pages;
+pub mod components;
 
 #[cfg(feature = "ssr")]
 pub mod worker_helpers;
