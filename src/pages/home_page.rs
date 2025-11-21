@@ -1,35 +1,13 @@
 use leptos::prelude::*;
 use leptos::{component, IntoView};
+use crate::components::{Header, Footer};
 
 #[component]
 pub fn HomePage() -> impl IntoView {
     view! {
         <div class="min-h-screen bg-white">
-            // Navigation
-            <nav class="fixed w-full top-0 z-50 bg-white bg-opacity-95 backdrop-blur-md border-b border-gray-200">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between items-center h-16">
-                        <div class="flex items-center">
-                            <div class="text-lg font-bold text-blue-600">
-                                "LeptosCloudflareWorkers"
-                            </div>
-                        </div>
-                        <div class="hidden md:flex items-center space-x-8">
-                            <a href="#features" class="text-gray-600 hover:text-gray-900 font-medium transition">
-                                "Features"
-                            </a>
-                            <a href="#how-it-works" class="text-gray-600 hover:text-gray-900 font-medium transition">
-                                "How It Works"
-                            </a>
-                            <button class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
-                                "Get Started"
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Header />
 
-            // Hero Section
             <div class="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
                 <div class="max-w-7xl mx-auto">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -52,16 +30,15 @@ pub fn HomePage() -> impl IntoView {
                                 "deploy on Cloudflare Workers, and enjoy blazing-fast performance with server-side rendering and client-side hydration."
                             </p>
                             <div class="flex flex-wrap gap-4 pt-4">
-                                <a href="https://github.com/frontmesh/leptos-cloudflare-workers" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl hover:shadow-blue-600/20">
+                                <a href="https://github.com/frontmesh/leptos-cloudflare-workers" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl hover:shadow-blue-600/20">
                                     "Start Building"
                                 </a>
-                                <a href="https://developers.cloudflare.com/workers/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition">
+                                <a href="https://developers.cloudflare.com/workers/" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-4 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition">
                                     "View Documentation"
                                 </a>
                             </div>
                         </div>
 
-                        // Hero Animation
                         <div class="relative hidden lg:block h-96">
                             <div class="absolute inset-0 flex items-center justify-center">
                                 <div class="absolute w-32 h-32 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-3xl opacity-20 animate-blob"></div>
@@ -79,7 +56,6 @@ pub fn HomePage() -> impl IntoView {
                 </div>
             </div>
 
-            // Features Section
             <div id="features" class="py-24 bg-gray-50 border-t border-gray-200">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-20">
@@ -92,7 +68,6 @@ pub fn HomePage() -> impl IntoView {
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        // Feature 1
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"⚙️"</span>
@@ -105,7 +80,6 @@ pub fn HomePage() -> impl IntoView {
                             </p>
                         </div>
 
-                        // Feature 2
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"⚡"</span>
@@ -118,7 +92,6 @@ pub fn HomePage() -> impl IntoView {
                             </p>
                         </div>
 
-                        // Feature 3
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"🌍"</span>
@@ -131,7 +104,6 @@ pub fn HomePage() -> impl IntoView {
                             </p>
                         </div>
 
-                        // Feature 4
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"🔒"</span>
@@ -144,7 +116,6 @@ pub fn HomePage() -> impl IntoView {
                             </p>
                         </div>
 
-                        // Feature 5
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"📦"</span>
@@ -157,7 +128,6 @@ pub fn HomePage() -> impl IntoView {
                             </p>
                         </div>
 
-                        // Feature 6
                         <div class="bg-white p-8 rounded-2xl border border-gray-200 hover:border-cyan-300 hover:shadow-lg transition-all">
                             <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
                                 <span class="text-2xl">"🚀"</span>
@@ -173,7 +143,6 @@ pub fn HomePage() -> impl IntoView {
                 </div>
             </div>
 
-            // How It Works
             <div id="how-it-works" class="py-24 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-20">
@@ -186,7 +155,6 @@ pub fn HomePage() -> impl IntoView {
                     </div>
 
                     <div class="space-y-12">
-                        // Step 1
                         <div class="flex gap-8 items-start">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-600 text-white font-bold text-xl">
@@ -205,7 +173,6 @@ pub fn HomePage() -> impl IntoView {
                             </div>
                         </div>
 
-                        // Step 2
                         <div class="flex gap-8 items-start">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-600 text-white font-bold text-xl">
@@ -223,7 +190,6 @@ pub fn HomePage() -> impl IntoView {
                             </div>
                         </div>
 
-                        // Step 3
                         <div class="flex gap-8 items-start">
                             <div class="flex-shrink-0">
                                 <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-600 text-white font-bold text-xl">
@@ -244,7 +210,6 @@ pub fn HomePage() -> impl IntoView {
                 </div>
             </div>
 
-            // CTA Section
             <div class="py-24 bg-blue-600">
                 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 class="text-5xl font-bold text-white mb-6">
@@ -259,101 +224,7 @@ pub fn HomePage() -> impl IntoView {
                 </div>
             </div>
 
-            // Footer
-            <footer class="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                        <div>
-                            <div class="text-xl font-bold text-white mb-4">
-                                "LeptosCloudflareWorkers"
-                            </div>
-                            <p class="text-gray-400">
-                                "Full-stack web development in Rust."
-                            </p>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-semibold mb-4">
-                                "Product"
-                            </h4>
-                            <ul class="space-y-2">
-                                <li>
-                                    <a href="#" class="text-gray-400 hover:text-white transition">
-                                        "Features"
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-gray-400 hover:text-white transition">
-                                        "Security"
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-semibold mb-4">
-                                "Resources"
-                            </h4>
-                            <ul class="space-y-2">
-                                <li>
-                                    <a href="https://leptos.dev/01_getting_started.html" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
-                                        "Leptos Docs"
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://developers.cloudflare.com/workers/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
-                                        "Workers Docs"
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://github.com/frontmesh/leptos-cloudflare-workers" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition">
-                                        "GitHub"
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h4 class="text-white font-semibold mb-4">
-                                "Company"
-                            </h4>
-                            <ul class="space-y-2">
-                                <li>
-                                    <a href="#" class="text-gray-400 hover:text-white transition">
-                                        "About"
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-gray-400 hover:text-white transition">
-                                        "Blog"
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="text-gray-400 hover:text-white transition">
-                                        "Contact"
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="border-t border-gray-800 pt-8">
-                        <div class="flex flex-col md:flex-row justify-between items-center">
-                            <p class="text-gray-400 text-sm">
-                                "© 2025 Leptos. All rights reserved."
-                            </p>
-                            <div class="flex space-x-6 mt-4 md:mt-0">
-                                <a href="#" class="text-gray-400 hover:text-white transition text-sm">
-                                    "Privacy"
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-white transition text-sm">
-                                    "Terms"
-                                </a>
-                                <a href="#" class="text-gray-400 hover:text-white transition text-sm">
-                                    "Status"
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer />
         </div>
     }
 }
