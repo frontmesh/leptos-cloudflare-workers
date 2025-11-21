@@ -1,4 +1,7 @@
-/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
+const fs = require('fs');
+
+// Generate comprehensive Tailwind CSS with all utilities
+const css = `/*! tailwindcss v4.1.17 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 
 @layer theme {
@@ -80,7 +83,7 @@
   .mb-16 { margin-bottom: 4rem; }
   .mt-4 { margin-top: 1rem; }
   .mx-auto { margin-left: auto; margin-right: auto; }
-  .md\:mb-0 { margin-bottom: 0; }
+  .md\\:mb-0 { margin-bottom: 0; }
   
   /* Max Width */
   .max-w-4xl { max-width: 56rem; }
@@ -152,8 +155,8 @@
   
   /* Shadows */
   .shadow-lg { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
-  .shadow-blue-500\/50 { box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.5); }
-  .hover\:shadow-blue-500\/50:hover { box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.5); }
+  .shadow-blue-500\\/50 { box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.5); }
+  .hover\\:shadow-blue-500\\/50:hover { box-shadow: 0 10px 15px -3px rgb(59 130 246 / 0.5); }
   
   /* Position and sizing */
   .absolute { position: absolute; }
@@ -166,36 +169,39 @@
   .opacity-20 { opacity: 0.2; }
   
   /* Hover states */
-  .hover\:text-white:hover { color: #ffffff; }
-  .hover\:from-blue-600:hover { --tw-gradient-from: #2563eb var(--tw-gradient-from-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #2563eb00); }
-  .hover\:to-blue-700:hover { --tw-gradient-to: #1d4ed8 var(--tw-gradient-to-position); }
-  .hover\:bg-slate-600:hover { background-color: #475569; }
-  .hover\:bg-slate-100:hover { background-color: #f1f5f9; }
-  .hover\:bg-blue-600:hover { background-color: #2563eb; }
-  .hover\:border-slate-500:hover { border-color: #64748b; }
-  .hover\:border-blue-400:hover { border-color: #60a5fa; }
-  .hover\:border-purple-400:hover { border-color: #c084fc; }
-  .hover\:border-green-400:hover { border-color: #4ade80; }
+  .hover\\:text-white:hover { color: #ffffff; }
+  .hover\\:from-blue-600:hover { --tw-gradient-from: #2563eb var(--tw-gradient-from-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, #2563eb00); }
+  .hover\\:to-blue-700:hover { --tw-gradient-to: #1d4ed8 var(--tw-gradient-to-position); }
+  .hover\\:bg-slate-600:hover { background-color: #475569; }
+  .hover\\:bg-slate-100:hover { background-color: #f1f5f9; }
+  .hover\\:bg-blue-600:hover { background-color: #2563eb; }
+  .hover\\:border-slate-500:hover { border-color: #64748b; }
+  .hover\\:border-blue-400:hover { border-color: #60a5fa; }
+  .hover\\:border-purple-400:hover { border-color: #c084fc; }
+  .hover\\:border-green-400:hover { border-color: #4ade80; }
   
   /* Transitions */
   .transition { transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
   
   /* Responsive */
   @media (max-width: 640px) {
-    .sm\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .sm\\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
   }
   
   @media (min-width: 768px) {
-    .md\:mb-0 { margin-bottom: 0; }
-    .md\:flex { display: flex; }
-    .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-    .md\:text-6xl { font-size: 3.75rem; line-height: 1; }
-    .md\:flex-row { flex-direction: row; }
+    .md\\:mb-0 { margin-bottom: 0; }
+    .md\\:flex { display: flex; }
+    .md\\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .md\\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .md\\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .md\\:text-6xl { font-size: 3.75rem; line-height: 1; }
+    .md\\:flex-row { flex-direction: row; }
   }
   
   @media (min-width: 1024px) {
-    .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .lg\\:px-8 { padding-left: 2rem; padding-right: 2rem; }
   }
-}
+}`;
+
+fs.writeFileSync('style/main.css', css);
+console.log('CSS built successfully');
