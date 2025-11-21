@@ -52,29 +52,79 @@ pub fn HomePage() -> impl IntoView {
                                 "deploy on Cloudflare Workers, and enjoy blazing-fast performance with server-side rendering and client-side hydration."
                             </p>
                             <div class="flex flex-wrap gap-4 pt-4">
-                                <button class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl hover:shadow-blue-600/20">
+                                <a href="https://github.com/frontmesh/leptos-cloudflare-workers" target="_blank" rel="noopener noreferrer" class="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition shadow-lg hover:shadow-xl hover:shadow-blue-600/20">
                                     "Start Building"
-                                </button>
-                                <button class="px-8 py-4 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition">
+                                </a>
+                                <a href="https://developers.cloudflare.com/workers/" target="_blank" rel="noopener noreferrer" class="px-8 py-4 border-2 border-gray-300 text-gray-900 font-semibold rounded-lg hover:border-gray-400 hover:bg-gray-50 transition">
                                     "View Documentation"
-                                </button>
+                                </a>
                             </div>
                         </div>
 
-                        // Hero Animation
+                        // Hero Animation - Abstract lightweight animation
                         <div class="relative hidden lg:block h-96">
                             <div class="absolute inset-0 flex items-center justify-center">
-                                // Animated gradient orbs
+                                // Animated gradient orbs (background)
                                 <div class="absolute w-32 h-32 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full blur-3xl opacity-20 animate-blob"></div>
                                 <div class="absolute w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
                                 <div class="absolute w-32 h-32 bg-gradient-to-r from-blue-300 to-cyan-300 rounded-full blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
                                 
-                                // Center circles
-                                <div class="absolute inset-0 flex items-center justify-center">
-                                    <div class="w-24 h-24 border-2 border-blue-200 rounded-full animate-spin-slow"></div>
-                                    <div class="absolute w-16 h-16 border-2 border-cyan-200 rounded-full animate-spin-reverse"></div>
-                                    <div class="absolute w-8 h-8 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full"></div>
+                                // Abstract animation
+                                <div class="relative w-48 h-48">
+                                    // Flowing lines that move
+                                    <svg class="absolute inset-0 w-full h-full" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                                        // Line 1 - diagonal flow
+                                        <line x1="0" y1="50" x2="200" y2="150" stroke="url(#grad1)" stroke-width="2" opacity="0.4" class="animate-pulse" style="animation: flow-x 3s ease-in-out infinite;"/>
+                                        // Line 2 - horizontal wave
+                                        <line x1="30" y1="100" x2="170" y2="100" stroke="url(#grad2)" stroke-width="2" opacity="0.3" class="animate-pulse" style="animation: flow-y 2.5s ease-in-out infinite;"/>
+                                        // Line 3 - diagonal counter
+                                        <line x1="200" y1="50" x2="0" y2="150" stroke="url(#grad3)" stroke-width="2" opacity="0.35" style="animation: flow-x-reverse 3.5s ease-in-out infinite;"/>
+                                        
+                                        // Gradients
+                                        <defs>
+                                            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#2563eb" stop-opacity="0.6"/>
+                                                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2"/>
+                                            </linearGradient>
+                                            <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.2"/>
+                                                <stop offset="100%" stop-color="#2563eb" stop-opacity="0.6"/>
+                                            </linearGradient>
+                                            <linearGradient id="grad3" x1="100%" y1="0%" x2="0%" y2="100%">
+                                                <stop offset="0%" stop-color="#2563eb" stop-opacity="0.4"/>
+                                                <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.2"/>
+                                            </linearGradient>
+                                        </defs>
+                                        
+                                        // Animated dots
+                                        <circle cx="100" cy="100" r="4" fill="#2563eb" opacity="0.8" class="animate-ping" style="animation-duration: 1.5s;"/>
+                                        <circle cx="60" cy="75" r="2" fill="#06b6d4" opacity="0.5" style="animation: float 4s ease-in-out infinite;"/>
+                                        <circle cx="140" cy="125" r="2" fill="#2563eb" opacity="0.5" style="animation: float 4s ease-in-out infinite; animation-delay: 1s;"/>
+                                    </svg>
                                 </div>
+                                
+                                <style>
+                                    {r#"
+                                    @keyframes flow-x {
+                                        0%, 100% { stroke-dashoffset: 0; }
+                                        50% { stroke-dashoffset: 10; }
+                                    }
+                                    @keyframes flow-x-reverse {
+                                        0%, 100% { stroke-dashoffset: 0; }
+                                        50% { stroke-dashoffset: -10; }
+                                    }
+                                    @keyframes flow-y {
+                                        0%, 100% { transform: translateY(0); }
+                                        50% { transform: translateY(-5px); }
+                                    }
+                                    @keyframes float {
+                                        0%, 100% { transform: translate(0, 0); }
+                                        25% { transform: translate(3px, -3px); }
+                                        50% { transform: translate(0, 5px); }
+                                        75% { transform: translate(-3px, -2px); }
+                                    }
+                                    "#}
+                                </style>
                             </div>
                         </div>
                     </div>
