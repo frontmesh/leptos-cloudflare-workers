@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:build": "node build-css.js"
+    "css:build": "postcss style/main.css -o style/main.css"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/frontmesh/leptos-cloudflare-workers/issues"
   },
